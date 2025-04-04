@@ -1,5 +1,6 @@
 import { userAvatarURL } from "@/utils"
 import MetaItem from "./MetaItem"
+import Image from "next/image"
 
 const Meta = () => {
     return (
@@ -11,7 +12,7 @@ const Meta = () => {
                     justify: "justify-self-end",
                     balls: [1, 2, 3, 4, 5, 6, 7]
                 }}>
-                <img alt="8M0S59TEBHSx6picWkDN8PWmR572's avatar" className="text-hidden p-0 object-contain w-full h-full" src={userAvatarURL} decoding="async" loading="lazy" />
+                <Image alt="8M0S59TEBHSx6picWkDN8PWmR572's avatar" width={100} height={100} className="text-hidden p-0 object-contain w-full h-full" src={userAvatarURL} decoding="async" loading="lazy" />
             </MetaItem>
             <div className="w-[48px] h-[48px] lg:w-[64px] lg:h-[64px] rounded-lg bg-[#170c25] flex-center m-auto sm:m-0" />
             <MetaItem
@@ -21,7 +22,7 @@ const Meta = () => {
                     justify: "justify-self-start",
                     balls: [9, 10, 11, 12, 13, 14, 15]
                 }}>
-                <img alt="bot_0's avatar" className="text-hidden p-0 object-contain w-full h-full" src="https://foony.com/img/avatars/bulby.webp" decoding="async" loading="lazy" />
+                <Image alt="bot_0's avatar" width={100} height={100} className="text-hidden p-0 object-contain w-full h-full" src="https://foony.com/img/avatars/bulby.webp" decoding="async" loading="lazy" />
             </MetaItem>
         </div>
     )

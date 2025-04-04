@@ -1,6 +1,6 @@
 "use client"
 import { useExitModal, useSignModal } from "@/store";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 const Head = ({ isChatOpen, setChatOpen }: { isChatOpen: boolean, setChatOpen: Dispatch<SetStateAction<boolean>> }) => {
     const { setShowExitModal } = useExitModal()

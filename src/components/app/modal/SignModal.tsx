@@ -117,7 +117,7 @@ const Signup = () => {
                     <label className={`absolute left-0 ${day === 0 ? "-top-[20%]" : "-top-[70%] text-xs"} ${month * day * year === 0 ? "text-[#ef4444]" : "text-white"} font-bold`}>Day</label>
                     <select value={day} onChange={(e) => setDay(parseInt(e.target.value))} className={`w-[128px] pb-1 [&>option]:bg-black text-white border-b-2 ${month * day * year === 0 ? "border-[#ef4444]" : "border-[#a972f54d]"}`} aria-label="Day" defaultValue={0}>
                         <option value="0" disabled></option>
-                        {Array.from({ length: 31 }, (_, i) => (i + 1)).map((v, i) => <option key={i} value={v}>{v}</option>)}
+                        {Array.from({ length: DAYS_OF_MONTH[month - 1] }, (_, i) => (i + 1)).map((v, i) => <option key={i} value={v}>{v}</option>)}
                     </select>
                 </div>
                 <div className="relative focus-within:[&>label]:-top-[70%] focus-within:[&>label]:text-xs focus-within:[&>label]:text-white">
