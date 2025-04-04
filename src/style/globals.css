@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  cursor: url(https://foony.com/img/games/account/items/Cursors/accountDefaultCursor.webp), auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  /* Text color */
+  -webkit-box-shadow: 0 0 0px 1000px #465a7266 inset;
+  /* Background color */
+  transition: background-color 5000s ease-in-out 0s;
+  /* Delay for background change */
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  /* Remove default styling */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d8b4fe66;
+  border-radius: 4px;
+  /* Optional rounded corners */
+  background-color: transparent;
+  /* Default background */
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: #e6d2ff;
+  display: block;
+  transform: translate(0, -15%);
+}
+
+input[type="checkbox"]:checked {
+  background-color: transparent;
+  /* Background when checked */
+}
+
+input[type="checkbox"]:hover {
+  /* background-color: transparent; */
+  /* Background on hover */
+}
